@@ -1,7 +1,5 @@
 package com.example.unittraining.section_one;
 
-import com.example.unittraining.section_third.Address;
-
 public class Account {
     private boolean active;
     private Address defaultDeliveryAddress;

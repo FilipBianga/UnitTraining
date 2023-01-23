@@ -1,4 +1,4 @@
-package com.example.unittraining.section_two;
+package com.example.unittraining.section_one;
 
 import org.junit.jupiter.api.Test;
 

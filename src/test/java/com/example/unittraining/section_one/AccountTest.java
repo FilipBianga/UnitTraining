@@ -1,6 +1,5 @@
 package com.example.unittraining.section_one;
 
-import com.example.unittraining.section_third.Address;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
