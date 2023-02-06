@@ -64,4 +64,16 @@ class MealTest {
         // porównywane są referencje obiektu (oczywiscie jezeli nie nadpiszemy metody equals i hashcode)
         assertEquals(meal1, meal2);
     }
+
+    // Testowanie wyjątku
+    @Test
+    void exceptionShouldBeThrownIfDiscountIsHigherThanThePrice() {
+
+        //given
+        Meal meal = new Meal(10, "Sajgonki");
+
+        //when
+        //then
+        assertThrows(IllegalArgumentException.class, () -> meal.getDiscountedPrice(20));
+    }
 }
