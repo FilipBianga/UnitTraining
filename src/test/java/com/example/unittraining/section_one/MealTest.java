@@ -60,8 +60,6 @@ class MealTest {
         Meal meal2 = new Meal(50, "Burger");
 
         //then
-        // trzbea nadpisać metode equals oraz hashcode by moc porownac wartosci w obiekcie a nie miejsce w pamieci obiektu
-        // porównywane są referencje obiektu (oczywiscie jezeli nie nadpiszemy metody equals i hashcode)
         assertEquals(meal1, meal2);
     }
 
