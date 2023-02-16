@@ -1,9 +1,6 @@
 package com.example.unittraining.section_one;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.DynamicTest;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.function.Executable;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -68,6 +65,7 @@ class MealTest {
         assertThat(meal1).isNotSameAs(meal2);
     }
 
+    @Tag("burger")
     @Test
     void twoMealsShouldBeEqualWhenPriceAndNameAreTheSame() {
 
@@ -99,6 +97,7 @@ class MealTest {
     }
 
     @DisplayName("Testy parametryzowane")
+    @Tag("burger")
     @ParameterizedTest
     @MethodSource("createMealsWithNameAndPrice")
     void burgerShouldHaveCorrectNameAndPrice(String name, int price) {
@@ -127,6 +126,7 @@ class MealTest {
     }
 
     @DisplayName("Testy dynamiczne")
+    @Tag("burger")
     @TestFactory
     Collection<DynamicTest> calculateMealPrices() {
         Order order = new Order();

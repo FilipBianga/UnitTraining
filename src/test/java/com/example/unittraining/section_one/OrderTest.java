@@ -2,6 +2,7 @@ package com.example.unittraining.section_one;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 
@@ -44,6 +45,7 @@ class OrderTest {
         assertThat(order.getMeals(), emptyCollectionOf(Meal.class));
     }
 
+    @Tag("burger")
     @Test
     void addingMealToOrderShouldIncreaseOrderSize() {
         //given
@@ -60,6 +62,7 @@ class OrderTest {
         assertThat(order.getMeals().get(0).getPrice(), equalTo(35));
     }
 
+    @Tag("burger")
     @Test
     void removingMealFromOrderShouldDecreaseOrderSize() {
         //given
